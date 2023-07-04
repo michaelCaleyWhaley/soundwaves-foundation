@@ -1,0 +1,26 @@
+{
+  "name": "soundwaves-foundation",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "sass": "^1.29.0",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.31.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^4.7.3"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "pdf-merger-js": "^4.3.0"
+  }
+}

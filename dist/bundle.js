@@ -1,0 +1,1 @@
+(()=>{const t=document.getElementsByClassName("pdf-btn");for(let e=0;e<t.length;e++)t[e].addEventListener("click",(t=>{t.target.classList.toggle("pdf-btn__active")}))})();

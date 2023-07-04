@@ -1,0 +1,46 @@
+<h1>test</h1>
+
+<button class="pdf-btn"
+    data-url="https://fe7a3b06-4060-4a1f-bfa4-03fcd9b3947a.usrfiles.com/ugd/fe7a3b_26940543e7b048c18e0afa058d20d9d6.pdf">PDF1</button>
+<button class="pdf-btn"
+    data-url="https://fe7a3b06-4060-4a1f-bfa4-03fcd9b3947a.usrfiles.com/ugd/fe7a3b_1b7dedd692644e18b71e81df5f556749.pdf">PDF2</button>
+<button class="pdf-btn"
+    data-url="https://fe7a3b06-4060-4a1f-bfa4-03fcd9b3947a.usrfiles.com/ugd/fe7a3b_402044f23e5d42299f6421d1ccecfe90.pdf">PDF3</button>
+
+<button id="submit">Submit!</button>
+
+<div id="output"></div>
+
+<script>
+    var pdfBtns = document.getElementsByClassName("pdf-btn");
+    var submitBtn = document.getElementById("submit");
+    
+
+    for (var i = 0; i < pdfBtns.length; i++) {
+        pdfBtns[i].addEventListener("click", function (e) {
+            e.target.classList.toggle("pdf-btn__active");
+        });
+    }
+
+    submitBtn.addEventListener('click', function () {
+        var currentSelectedPdfs = document.getElementsByClassName('pdf-btn__active');
+        var alert = ''
+
+        for (var i = 0; i < currentSelectedPdfs.length; i++) {
+            var pdfUrl = currentSelectedPdfs[i].dataset.url;
+            alert = alert + ' ' + pdfUrl;
+        }
+        var outputEle = document.getElementById("output");
+        outputEle.innerHTML = alert;
+    });
+</script>
+
+<style>
+    .pdf-btn {
+        background-color: red;
+    }
+
+    .pdf-btn__active {
+        background-color: green;
+    }
+</style>
