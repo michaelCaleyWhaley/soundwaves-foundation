@@ -9,7 +9,6 @@
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  // "plugins": ["@typescript-eslint"],
   "plugins": ["@typescript-eslint", "prettier"],
   "root": true,
   "rules": {
